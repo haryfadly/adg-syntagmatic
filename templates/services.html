@@ -1,0 +1,282 @@
+{% extends "base.html" %} {% block title %}Services{% endblock %} {% block
+content %}
+<div class="container mt-3">
+  <h1>Welcome!</h1>
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
+  messages %}
+  <p><i>{{ msg }}</i></p>
+  {% endfor %} {% endif %} {% endwith %}
+</div>
+<div class="container mt-3">
+  <!-- example passing variable: -->
+  <!-- <h8>user no {{no}}</h8> -->
+  <!-- <div class="mb-4">
+    Automatic Distractor Generation with Syntagmatic Relation for vocabulary question.<br>
+    For help, please click <a href="/">here</a>.
+  </div> -->
+  <div class="mb-4">
+    Syntagmatic Distractor Generation for Vocabulary Multiple Choice Questions.<br>
+    For help, please click <a href="/">here</a>.
+  </div>
+  <!-- dont forget add form action and method -->
+  <form method="POST">
+    <div class="form-group mb-3">
+      <label for="inputPassage" class="form-label">Reading passage:</label>
+      <div class="input-group input-group-md">
+        <!-- <span class="input-group-text">Reading passage:</span> -->
+        <!-- {{ sentence }} -->
+        <textarea class="form-control" aria-label="With textarea" placeholder="Input reading passage."
+        name="passage"
+        required>I had started to feel very tired and I decided to try and find somewhere to have a sleep.</textarea>
+        <!-- <textarea class="form-control" aria-label="With textarea" placeholder="Input reading passage."
+        name="passage"
+        required>The exact role of other factors is much more difficult to pinpoint for instance, Teotihuacan's religious significance as a shrine...</textarea> -->
+        <!-- <textarea class="form-control" aria-label="With textarea" placeholder="Input sentence"
+        name="passage"
+        required>The shark has senses specially designed for the animal's life underwater. Smell is a shark's most acute sense. Approximately 70 percent of the shark's brain is used for smelling functions. Experiments have shown that sharks can detect prey solely by smell, and the hungrier the shark, the less stimulant needed to elicit a reaction.
+        Sharks are sensitive to light and can detect certain objects even in murky water. Some have a mirror-like layer under the retina that reflects incoming light and increases the amount of light available to the eye. Sharks can also sense electric and magnetic fields. Sensory pores located on the shark's head can detect a prey's bioelectric field even if the prey is buried in sand. A shark can also detect the Earth's magnetic field. Open-ocean sharks may use this information to navigate and orient themselves.</textarea
+        > -->
+        <!-- <div id="passageHelp" class="input-group">
+          Input reading passage max xxx words.
+        </div> -->
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="inputQuestion" class="form-label">Question:</label>
+      <input
+        type="text"
+        class="form-control"
+        aria-describedby="questionHelp"
+        placeholder="Input question stem with target word inside quotation marks (&#34;&#34;)."
+        name="stem"
+        value="The word &#34;have&#34; in paragraph above is the closest in meaning to..."
+        required/>
+        <!-- value="{{ stem }}" -->
+      <!-- <div id="questionHelp" class="form-text">Input question statement with target word inside quotation marks ("")</div>
+    </div> -->
+    <div class="form-group mb-3">
+      <label for="inputAnswer" class="form-label">Correct answer:</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Input 1 answer word for distractor generation."
+        name="correct_answer"
+        value="get"
+        required/>
+        <!-- value="{{ correct_answer }}" -->
+      <!-- <div id="answerHelp" class="form-text">
+        Input 1 answer word for distractor generation.
+      </div> -->
+    </div>
+  
+    <!-- <div class="form-group row">
+      <label class="col-sm-2">Choose PMI rank: </label>
+      <div class="col-">
+        <select class="form-control form-control-sm" name="pmi_rank">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+    </div> -->
+
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" name="correct_mark" id="correct_mark">
+      <label class="form-check-label" for="correct_mark">Show <i>(correct)</i> mark on option</label>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" name="ans_mark" id="ans_mark" checked>
+      <label class="form-check-label" for="ans_mark">Show <i>ANS: key</i> for examview compatibility</label>
+    </div>
+    <!-- <button type="submit" class="btn btn-dark txt-white" style="background-color: #073c64ff">Submit</button> -->
+    <button type="submit" class="btn btn-warning">Generate</button>
+  </form>
+  <div class="mb-5">
+    <!-- spacing -->
+  </div>
+  <div class="mb-3">
+    <label for="text"><h5>Result:</h5></label>
+    <div class="input-group">
+      <textarea
+        class="form-control text-justify"
+        id="copyText"
+        aria-label="With textarea"
+        rows="9" 
+        style="height:100%;"
+        readonly
+      >{{ passage }}
+
+{{ stem }}
+{% if correct_answer %}a. {% endif %}{{ correct_answer }} {{ mark }}
+{% if correct_answer %}b. {% endif %}{{ distractors[0] }}
+{% if correct_answer %}c. {% endif %}{{ distractors[1] }}
+{% if correct_answer %}d. {% endif %}{{ distractors[2] }}
+{{ ans }}
+</textarea
+      >
+      <a class="btn btn-outline-warning text-dark" style="justify-content: space-between;" href="#" role="button"id="copyBtn"
+      data-toggle="collapse"
+      data-target="#collapseWidthExample"
+      aria-expanded="false"
+      aria-controls="collapseWidthExample"><br><br><br><br>Copy</a>
+      <!--using sweetalert via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+      const copyBtn = document.getElementById("copyBtn");
+      const copyText = document.getElementById("copyText");
+      const correctMark = document.getElementById("correct_mark");
+      const ansMark = document.getElementById("ans_mark");
+
+      ansMark.onclick = () => {
+        correctMark.checked = false;
+        // correctMark.disabled = true;
+      };
+      correctMark.onclick = () => {
+        ansMark.checked = false;
+      };
+      
+
+      copyBtn.onclick = () => {
+        copyText.select(); // Selects the text inside the input
+        document.execCommand("copy"); // Simply copies the selected text to clipboard
+        Swal.fire({
+          //displays a pop up with sweetalert
+          icon: "success",
+          title: "Text copied to clipboard",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+      };
+    </script>
+    </div>
+
+    <!-- Explanation -->
+    <div class="mt-3">
+      <p>
+        <button
+          class="btn btn-outline-warning text-dark"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseWidthExample"
+          aria-expanded="true"
+          aria-controls="collapseWidthExample"
+        ><h7>Explanation</h7></button>
+      </p>
+      <div style="min-height: 120px">
+        <div class="collapse width" id="collapseWidthExample">
+          <div class="card card-body">
+            <!-- <h5>Explanation:</h5> -->
+            <div class="container">
+              <p>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Variable</th>
+                      <th scope="col">Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- <th scope="row">1</th> -->
+                      <td>Sentence</td>
+                      <td>{{ sentence }}</td>
+                    </tr>
+                    <tr>
+                      <td>Stem</td>
+                      <td>{{ stem }}</td>
+                    </tr>
+                    <tr>
+                      <td>Correct answer</td>
+                      <td>{{ correct_answer }}</td>
+                    </tr>
+                    <tr>
+                      <td>Target word</td>
+                      <td>{{ target_word }}</td>
+                    </tr>
+                    <tr>
+                      <td>Target POS</td>
+                      <td>{{ target_pos }}</td>
+                    </tr>
+                    <tr>
+                      <td>Target tag</td>
+                      <td>{{ spacy_tag }}</td>
+                    </tr>
+                    <tr>
+                      <td>Collocation candidates</td>
+                      <td>{{ collocations }}</td>
+                    </tr>
+                    <tr>
+                      <td>Collocation PMI's score</td>
+                      <td>{% if scores %}{% for score in scores %}{{ score }}<br>{% endfor %}{% endif %}</td>
+                    </tr>
+                    <!-- <tr>
+                      <td>Selected PMI's rank</td>
+                      <td>{{ pmi_rank }}</td>
+                    </tr> -->
+                    <tr>
+                      <td>Collocation with highest PMI score</td>
+                      <td>{{ collocation }}</td>
+                    </tr>
+                    <tr>
+                      <td>Collocated word</td>
+                      <td>{{ collocated_word_list }}</td>
+                    </tr>
+                    <tr>
+                      <td>Word POS</td>
+                      <td>{% if word_pos %}{% for w_pos in word_pos %}{{ w_pos }}<br>{% endfor %}{% endif %}</td>
+                    </tr>
+                    <tr>
+                      <td>Tag</td>
+                      <td>{{ tag }}</td>
+                    </tr>
+                    <tr>
+                      <td>Relation</td>
+                      <td>{{ relation }}</td>
+                    </tr>
+                    <tr>
+                      <td>Candidates</td>
+                      <td>{{ candidates }}</td>
+                    </tr>
+                    <tr>
+                      <td>Basis words</td>
+                      <td>{{ basis_word }}</td>
+                    </tr>
+                    <tr>
+                      <td>Basis POS</td>
+                      <td>{{ basis_pos }}</td>
+                    </tr>
+                    <tr>
+                      <td>Collocation database query</td>
+                      <td>{% if api_request_list %}{% for req in api_request_list %}{{ req }}<br>{% endfor %}{% endif %}</td>
+                    </tr>
+                    <tr>
+                      <td>Collocation database result</td>
+                      <td>{{ sorted_datas_dict }}</td>
+                    </tr>
+                    <tr>
+                      <td>Distractors candidate and related word</td>
+                      <td>{{ related_word_dict }}</td>
+                    </tr>
+                    <!-- <tr>
+                      <td>Distractors candidate</td>
+                      <td>{{ filtered_datas_dict }}</td>
+                    </tr> -->
+                    <tr>
+                      <td>Distractor list</td>
+                      <td>{{ distractors }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- {% endblock %} {% block result %}
+<div class="mt-3">Coba dulu</div>
+{% endblock %} -->

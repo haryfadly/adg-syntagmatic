@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block title %}Preprocessed Text{% endblock %} {%
+block content %}
+<div class="container mt-3">
+  <!-- <h1>Welcome, {{name}}!</h1> -->
+  <h1>Result</h1>
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
+  messages %}
+  <p><i>{{ msg }}</i></p>
+  {% endfor %} {% endif %} {% endwith %}
+</div>
+<div class="container mt-5">
+  <!-- <div class="mb-4">For help, please click <a href="/">here</a>.</div> -->
+  <div class="mb-5>
+    <form method="POST" action="{{ url_for('process_text') }}">
+      <div class="form-group">
+        <label for="text">Text to preprocess:</label>
+        <textarea class="form-control" id="text" name="text" rows="3" disabled>
+{{ text }}</textarea
+        >
+        <!-- <small id="textAreaHelp" class="form-text text-muted"
+          >The quick brown fox jump over the lazy dog.</small
+        > -->
+      </div>
+      <!-- <button type="submit" class="btn btn-warning">Submit</button> -->
+    </form>
+  </div>
+  <!-- <div class="mb-3 border bg-light mt-3"> -->
+  <label for="text">Result:</label>
+  <div class="mb-3">
+    <!-- The text field -->
+    <div class="input-group">
+      <!-- <div class="input-group-prepend">
+        <span class="input-group-text">Result:</span>
+      </div> -->
+      <textarea
+        class="form-control"
+        value="{{preprocessed_text}}"
+        id="copyText"
+        aria-label="With textarea"
+        readonly
+      >
+{{ preprocessed_text }}</textarea
+      >
+      <!-- The button used to copy the text -->
+      <button
+        class="btn btn-outline-primary"
+        id="copyBtn"
+        data-toggle="collapse"
+        data-target="#collapseWidthExample"
+        aria-expanded="false"
+        aria-controls="collapseWidthExample"
+      >
+        Copy
+      </button>
+    </div>
+
+    <!--using sweetalert via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+      const copyBtn = document.getElementById("copyBtn");
+      const copyText = document.getElementById("copyText");
+
+      copyBtn.onclick = () => {
+        copyText.select(); // Selects the text inside the input
+        document.execCommand("copy"); // Simply copies the selected text to clipboard
+        Swal.fire({
+          //displays a pop up with sweetalert
+          icon: "success",
+          title: "Text copied to clipboard",
+          showConfirmButton: false,
+          timer: 1000,
+        });
+      };
+    </script>
+  </div>
+  <div class="mb-4">
+    Click <a href="/one">here</a> to preprocess another words.
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+#app secret key
+app_secret_key=
+
+## API-url
+
+# v1
+
+#API-url=
+
+# v2
+
+API-url=
+
+# X-RapidAPI-Key
+
+X-RapidAPI-Key=
+
+# X-RapidAPI-Host
+
+X-RapidAPI-Host=

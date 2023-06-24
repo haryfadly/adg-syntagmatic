@@ -1,0 +1,4381 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<div class="container mt-3">
+  <h1></h1>
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
+  messages %}
+  <p><i>{{msg}}</i></p>
+  {% endfor %} {% endif %} {% endwith %}
+</div>
+<div class="container mt-5">
+  <div class="WordSection1">
+    <p class="MsoTitleCxSpFirst" align="center" style="text-align: center">
+      <span lang="EN-US">Generation Result</span>
+    </p>
+
+    <p class="MsoTitleCxSpLast" align="center" style="text-align: center">
+      <span lang="EN-US" style="font-size: 14pt"
+        >Syntagmatic Distractor Generation for Vocabulary Multiple Choice
+        Questions</span
+      >
+    </p>
+
+    <div
+      style="
+        border: none;
+        border-bottom: solid windowtext 1pt;
+        padding: 0cm 0cm 1pt 0cm;
+      "
+    >
+      <p class="MsoNormal" style="border: none; padding: 0cm">
+        <span lang="EN-US">&nbsp;</span>
+      </p>
+    </div>
+
+    <br />
+
+    <p class="MsoNormal"><span lang="EN-US">Dear Expert,</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >I want to express my sincere gratitude for your willingness to lend
+        your expertise to our research project. Your insights will be invaluable
+        to help us achieve our goals, and we are incredibly grateful for your
+        participation.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >I am Hary Fadly Y., a postgraduate student at the Department of
+        Electrical and Information Engineering, Gadjah Mada University.
+        Currently doing research about distractor generation for English
+        vocabulary tests. I have generated distractors based on syntagmatic
+        relations with the correct answer.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >As an expert, I need your expertise to verify vocabulary test items in
+        several aspects, such as item accuracy, syntagmatic relation, and if
+        any, syntagmatic distractor categorization.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">Instruction:&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >1. We will give you 40 vocabulary test items. Each item contains a
+        reading passage, target word, correct answer, and distractor.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >2. Each test item will ask about the target word's closest
+        meaning.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >3. Test item accuracy validation. Accuracy means the test item only has
+        one correct answer.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >4. Syntagmatic relation validation.&nbsp;Distractor have strong
+        semantic or&nbsp;syntactic&nbsp;relationship and&nbsp;tend to occur
+        together in a language..</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >5. Problematic distractor categorization. If there is any problematic
+        distractor, please categorized it based on available categories.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <a
+        href="https://drive.google.com/file/d/1I3E2ZdDo4AYwW2KzKOm3vSa5mpwS8qDF/view"
+        target="_blank"
+        ><span lang="EN-US"
+          >Please check document here to see complete instruction</span
+        ></a
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+      <a
+        href="/"
+        class="btn btn-primary"
+        style="background-color: #004a74ff"
+        tabindex="1"
+        role="button"
+        aria-disabled="true"
+        >Back to home</a
+      >
+    </div>
+    <div class="btn-group mr-2" role="group" aria-label="Second group">
+      <button type="button" class="btn btn-link" disabled>or</button>
+    </div>
+    <div class="btn-group mr-2" role="group" aria-label="Third group">
+      <a
+        href="/services"
+        class="btn btn-warning"
+        tabindex="-1"
+        role="button"
+        aria-disabled="true"
+        >Try it out</a
+      >
+    </div>
+
+    <div
+      style="
+        border: none;
+        border-bottom: solid windowtext 1pt;
+        padding: 0cm 0cm 1pt 0cm;
+      "
+    >
+      <p class="MsoNormal" style="border: none; padding: 0cm">
+        <span lang="EN-US">&nbsp;</span>
+      </p>
+    </div>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >1.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          src="{{url_for('static', filename='question/image001.png')}}"
+      /></span>
+    </p>
+    <!-- width="210"
+    height="75"
+    src="{{url_for('static', filename='question/image001.png')}}" -->
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The exact role of other factors is much more difficult to pinpoint for
+        instance, Teotihuacan's religious significance as a shrine...</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;pinpoint&quot; in paragraph 2 is closest in meaning
+        to...</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. identify precisely  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. apply in</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. give</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. cite</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >2.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US"> </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="134"
+          src="{{url_for('static', filename='question/image002.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >If a couple can reach a decision to divorce without first deciding
+        which parter is to blame, the divorce settlement can be negotiated more
+        easily and equitably and the postdivorce healing process can begin more
+        rapidly.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;settlement&quot; in line 10 is closest in meaning to
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. agreement  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. proceeding</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. court</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. case</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >3.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US"> </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="111"
+          src="{{url_for('static', filename='question/image003.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >In a partial eclipse, the Moon covers part of the Sun; in an annular
+        eclipse, the Moon covers the center of the sun, leaving a bright ring of
+        light around the Moon; in a total eclipse, the Sun in completely covered
+        by the Moon.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;ring&quot; in line 3 could most easily be replaced
+        by</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. circle  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. eye</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. day</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. lamp</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif; color: red"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >4.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="166"
+          id="Picture 3"
+          src="{{url_for('static', filename='question/image004.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Scientist and engineers work in many of the same fields and industries
+        but have a different roles.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;roles&quot; in the passage is closest in meaning
+        to...</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. positions  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. types</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. kinds</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. ways</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >5.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="369"
+          height="226"
+          src="{{url_for('static', filename='question/image005.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >These and similar accounts have led some people to infer that creatures
+        other than humans can actually count.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;accounts&quot; in line 15 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. reports  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. householder</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. children</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. areas</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >6.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="133"
+          src="{{url_for('static', filename='question/image006.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The hippo has a natural affinity for the water. It does not float on
+        top of the water, instead, it can easily walk along the bottom of a body
+        of water.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;float&quot; in line 4 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. drift  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. reach</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. climb</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. sit</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >7.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="152"
+          src="{{url_for('static', filename='question/image007.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >If asked to estimate the age of oldest living trees on earth, the often
+        come up with the guesses in the neighborhood of two or perhaps three
+        hundred years.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;estimate&quot; in line 2 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. approximate  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. reach</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. let</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. attain</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >8.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="151"
+          src="{{url_for('static', filename='question/image008.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Oligopoly occurs when a few companies dominate the sales of a product
+        or service.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;dominate&quot; in line 1 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. control  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. found</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. base</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. own</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >9.<span style="font: 7pt 'Times New Roman'"
+          >&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="179"
+          src="{{url_for('static', filename='question/image009.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Many flowering plants woo insects pollinators and genlty direct them to
+        their most fertile blossoms by changing the color of individual flower
+        from day to day.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;woo&quot; in line 1 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. attract  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. build</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. produce</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. have</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >10.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="298"
+          id="Picture 12"
+          src="{{url_for('static', filename='question/image010.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >By the 1800, federal negotiators were trying to convince many tribes to
+        sell their land and move out of the line of frontier expansion, a policy
+        that culminated in the forced explulsion of the major Southeastern
+        tribest to the west.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;culminated&quot; in line 12 is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. ended  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. pursued</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. adopted</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. implemented</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >11.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="150"
+          src="{{url_for('static', filename='question/image011.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Jacob highlighted the destruction of the richness of American cities by
+        massive, impersonal building.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Which of the following is closest in meaning to the word
+        &quot;highlighted&quot; in line 5?</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. emphasized  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. caused</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. led</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. escaped</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >ANS: A <br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >12.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="301"
+          src="{{url_for('static', filename='question/image012.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">de</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Which of the following is closest in meaning to the word
+        &quot;thwarted&quot; in line 16?</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. defeated  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. made</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. failed</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. failed in</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >13.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="159"
+          src="{{url_for('static', filename='question/image013.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >They sat on their front steps and chatted with neighbors.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;chatted&quot; in line 23 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. talked  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. let</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. allowed</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. forced</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >ANS: A<br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >14.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="195"
+          src="{{url_for('static', filename='question/image014.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">g</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;speculated&quot; in line 8 could best be replaced
+        by</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. guessed  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. thought</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. sold</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. appointed</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >15.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="111"
+          src="{{url_for('static', filename='question/image015.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Despite its widespread use in industry, carbon tetrachloride has been
+        banned for home use.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;banned&quot; in line 4 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. forbidden  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. stayed at</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. died at</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. remained at</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >ANS: A<br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >16.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="189"
+          src="{{url_for('static', filename='question/image016.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Its name was derived from the stone tools and weapons that modern
+        scientist found.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >In line 3, the word &quot;derived&quot; is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. originated  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. have</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. let</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. allowed</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >17.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="185"
+          src="{{url_for('static', filename='question/image017.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Originally these contest were held as games of friendship, and any wars
+        in progress were halted to allow the games to take place.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;halted&quot; in line 16 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. curtailed  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. used</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. taken</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. made</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >ANS: A<br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >18.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="134"
+          src="{{url_for('static', filename='question/image018.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Another argument in favor of no-fault divorce is that proving fult in
+        court, in a public arena, is a destructive process that only serves to
+        lengthen the divorce process and that dramatically increases the
+        negative feelings present in a divorce.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;present&quot; in line 9 could most easily be replaced
+        by</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. existing  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. revulsion</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. state</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. relief</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >19.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="181"
+          id="Picture 24"
+          src="{{url_for('static', filename='question/image019.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">l</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;foremost&quot; in line 1 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. leading  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. health</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. state</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. figure</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >20.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="190"
+          id="Picture 27"
+          src="{{url_for('static', filename='question/image020.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Besides being the first female physician in the United States and
+        founding the own hospital, she also established the first medical school
+        for women.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;founding&quot; in line 9 means most nearly the same
+        as</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. establishing  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. letting</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. allowing</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. having</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >ANS: A<br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >21.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="126"
+          id="Picture 28"
+          src="{{url_for('static', filename='question/image021.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >Other plants, such as the mesquite, have extraordinary deep root
+        systems that allow them to obtain water from far below the desert's arid
+        surface.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">The word &quot;arid&quot; in line 11 means</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. dry  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. smooth</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. flat</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. inner</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >22.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="135"
+          id="Picture 29"
+          src="{{url_for('static', filename='question/image022.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >One of his regular jobs was in the Maple Leaf Club in Sedalia,
+        Missouri.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;regular&quot; in line 9 could best be replaced by</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. steady  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. good</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. odd</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. new</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >23.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="150"
+          id="Picture 30"
+          src="{{url_for('static', filename='question/image023.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >This relatively short height may be the one of the factors that aid the
+        bristlecone pine in living to a ripe old age-high winds and inclement
+        weather cannot easily reach the shorter trees and cause damage.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;inclement&quot; in line 10 could best be replaced
+        by</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. bad  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. blow</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. gust</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. turbine</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >ANS: A<br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >24.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="226"
+          id="Picture 31"
+          src="{{url_for('static', filename='question/image024.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">f</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        >The word &quot;brittle&quot; in line 3 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">a. fragile  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">b. tight</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">c. hard</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">d. wild</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">ANS: A</span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >25.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="167"
+          id="Picture 1764297399"
+          src="{{url_for('static', filename='question/image025.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >In general,  a tornado cuts a path of a few hundreds yards and last
+        less than an hour; an average tornado might propel itself at a speed of
+        15 or 20 miles per hour and therefore cover a distance of 20 or so
+        miles.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;propel&quot; in line 7 could best be replaced by</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. move  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. touch down</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. hit</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. confirm</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >      <br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >26.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="167"
+          id="Picture 543972125"
+          src="{{url_for('static', filename='question/image025.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Traveling at an average speed of 60 miles per hour, the winds at the
+        center of the storm swirled around at considerably more that 200 miles
+        per hour.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Look at the word &quot;swirled&quot; in paragraph 2. This word is
+        closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. circled  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. weathered</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. raised</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. encountered</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >27.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="443"
+          height="114"
+          id="Picture 6"
+          src="{{url_for('static', filename='question/image026.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Faced with serious threats to its future, the company is taking steps
+        to improve its outlook.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;steps&quot; in line 2 could best be replaced by</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. action  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. someone</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. parts</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. places</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >28.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="90"
+          src="{{url_for('static', filename='question/image027.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Other cultures have recognized the multipurpose benefits of this
+        aromatic fruit.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;multipurpose&quot; in line 3 is closest in meaning
+        to...</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. varied  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. great</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. economic</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. right</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >29.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="128"
+          src="{{url_for('static', filename='question/image028.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >In Asia it is used to season sauces such as curry, in Middle Eastern
+        countries it is steeped to prepare a flavorful, golden colored tea; in
+        parts of Northern Europe it is used as a spice in various types of
+        pastry.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Which of the following is closest in meaning with the word
+        &quot;season&quot; in line 4?</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. spice  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. system</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. term</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. method</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">      </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >30.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US"
+        >.<img
+          border="0"
+          width="468"
+          height="142"
+          id="Picture 8"
+          src="{{url_for('static', filename='question/image029.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >If, however, an elephant survives these disasters, it falls prey to old
+        age in its mid-sixties.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Which of the following could be used to replace the word
+        &quot;survives&quot; in line 6?</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. lives through  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. occur</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. strike</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. relief</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >31.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="240"
+          id="Picture 1739390622"
+          src="{{url_for('static', filename='question/image030.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >It could be considered rather ironic that these symbol of British rule
+        were included on the American flag in that the American colonist were
+        fighting for independence from the British.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;ironic&quot; in line 6 could most easily replaced
+        by</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. unexpected  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. likely</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. more</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. less</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >32.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="240"
+          id="Picture 747683532"
+          src="{{url_for('static', filename='question/image030.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >As a result, Congress made the decision to revert to the original
+        thirteen stars and thirteen stripes, one for each of the thirteen
+        colonies battling for independence.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The expression &quot;revert&quot; in line 17 means</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. return to  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. make</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. take</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. reverse</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><br />
+        <br />
+      </span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >33.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="225"
+          id="Picture 14"
+          src="{{url_for('static', filename='question/image031.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >It has received significant attention in recent years when increased
+        pressure for energy conservation has accentuated the need for more
+        efficient methods of processing the bovne carcass.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;pressure&quot; in line 3 is nearest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. urgency  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. risk</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. amount</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. source</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >34.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="225"
+          id="Picture 1350998835"
+          src="{{url_for('static', filename='question/image031.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >It has received significant attention in recent years when increased
+        pressure for energy conservation has accentuated the need for more
+        efficient methods of processing the bovine carcass.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;accentuated&quot; in line 4 is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. highlighted  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. thought</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. met</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. felt</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >35.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="112"
+          id="Picture 15"
+          src="{{url_for('static', filename='question/image032.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The French initiated the project but sold their rights to the United
+        States, which actually began the construction of the project.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >In line 11, &quot;initiated&quot; is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. launched  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. wrought on</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. included</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. spoke</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >36.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="196"
+          id="Picture 18"
+          src="{{url_for('static', filename='question/image033.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >They grow in many habitats and ate often pioneers in hostile
+        environments where few other organism can flourish.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >In line 7, the word &quot;hostile&quot; is nearest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. inhospitable  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. natural</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. urban</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. safe</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >37.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="81"
+          id="Picture 19"
+          src="{{url_for('static', filename='question/image034.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >A termite is much like an ant in its communal habits, although
+        physically the two insects are distinct.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;communal&quot; in line 2 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. social  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. inveterate</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. intemperate</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. dissolute</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >38.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="96"
+          id="Picture 22"
+          src="{{url_for('static', filename='question/image035.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >In coming years. we can expect to see more and more innovations in the
+        continuing effort to remedy situation which must be remedied if the
+        citizens who have valid claims are going to be able to have their day in
+        court.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;remedy&quot; in in line 35 is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. review  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. fail</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. become</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. deteriorate</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >39.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="204"
+          id="Picture 23"
+          src="{{url_for('static', filename='question/image036.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Exploration and detailed examination of the base of the structure
+        reveal many intersecting lines.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >The word &quot;intersecting&quot; in line 16 is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. crossing  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. draw</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. build</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. extend</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >40.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="204"
+          id="Picture 19151923"
+          src="{{url_for('static', filename='question/image036.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >Others are prophesied for future generation and are currently under
+        investigation.</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        >In line 20, the word &quot;prophesied&quot; is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">a. foretold  </span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">b. looked</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">c. predicted</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">d. secured</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >41.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="257"
+          src="{{url_for('static', filename='question/image037.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >It is coupled to a high-intensity light. Light enters the cores of the
+        high-purity silicon glass and travels along the fibers.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Which of the following is closest in meaning to the word
+        &quot;cores&quot; in line 9?</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">a. centers  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. key</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. album</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. bruce</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >42.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="187"
+          id="Picture 7"
+          src="{{url_for('static', filename='question/image038.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >In addition to the great ridges and volcanic chains, the oceans conceal
+        another form of undersea mountains: the strange guyot, or flat-topped
+        seamount.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;conceal&quot; in line 1 is closest in meaning to which
+        of the following?</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">a. hide  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. art</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. book</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. part</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >43.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="135"
+          src="{{url_for('static', filename='question/image039.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >It is now generally accepted that the figure of Uncle Sam is based in
+        Samuel Wilson, and the US Congress has made it official by adopting a
+        resolution naming samuel wilson as the inspirastion for Uncle Sam.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;official&quot; in line 10 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">a. authorized  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. worse</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. hard</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. better</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >44.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonim)</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="137"
+          id="Picture 25"
+          src="{{url_for('static', filename='question/image040.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Products such as margarine and cooking oils are changed from liquids to
+        semisolids by combining hydrogen with their molecules.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;combining&quot; in line 3 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">a. adding  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. compose of</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. fill with</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. combine with</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >45.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonim)</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="137"
+          id="Picture 547144610"
+          src="{{url_for('static', filename='question/image040.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Products such as margarine and cooking oils are changed from liquids to
+        semisolids by combining hydrogen with their molecules.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;combining&quot; in line 3 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">a. adding  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. compose of</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. fill with</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. combine with</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >46.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="243"
+          id="Picture 26"
+          src="{{url_for('static', filename='question/image041.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >After his release, he took up the trade of itinerant portrait painter,
+        working his way through southern New England and New York.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;itinerant&quot; in line 10 is closest in meaning to
+        which of the following?</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">a. traveling  </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. italian</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. american</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. great</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >47.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="449"
+          height="333"
+          id="Picture 1"
+          src="{{url_for('static', filename='question/image042.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >Two such sites are the giant Valles Caldera in New Mexico, where the
+        obsidians flows are hundreds of feet thicks, and the Glass Buttes in
+        Oregon, which are composed entirely of obsidian.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;sites&quot; in line 10 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. places  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. man</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. woman</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. type</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >48.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="449"
+          height="129"
+          src="{{url_for('static', filename='question/image043.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >In a government election, the incumbent generally has a strong
+        advantage over a newcomer.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >An &quot;incumbent&quot; in line 1 is most likely</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. a current office-holder  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. householder</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. child</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. area</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >49.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="128"
+          src="{{url_for('static', filename='question/image044.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The &quot;piece of eight&quot; was the nickname of the Spanish
+        &quot;peso,&quot; which was the rough equivalent of the American dollar
+        in early America.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;rough&quot; in line 1 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. approximate  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. modern</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. german</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. exact</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >50.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="142"
+          id="Picture 1402232497"
+          src="{{url_for('static', filename='question/image029.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >In old age, elephants tend to search out a final home where there is
+        shade for comfort from the sun and soft vegetation for cushioning; the
+        bones of many old elephants have been found in such places.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;shade&quot; in line 10 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. diminished light  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. great</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. comparative</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. personal</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >51.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="124"
+          id="Picture 13"
+          src="{{url_for('static', filename='question/image045.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >People made crude pottery and the first fish books.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;crude&quot; in line 12 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. primitive  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. ancient</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. broken</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. tin-glazed</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US"> </span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >52.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="240"
+          id="Picture 9"
+          src="{{url_for('static', filename='question/image030.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The American flag is the end product of a long evolution.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;product&quot; in line 1 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. result  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. user</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. point</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. american football</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US">
+        <br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >53.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonim)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="171"
+          id="Picture 21"
+          src="{{url_for('static', filename='question/image046.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >Many suggestion have been made concerning methods of ameliorating the
+        situation, but as in most branches of government, changes come
+        slowly.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;ameliorating&quot; in line 6 is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. improving  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. improve</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. explain</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. discuss</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US"
+        ><br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >54.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonim)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="171"
+          id="Picture 545149858"
+          src="{{url_for('static', filename='question/image047.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >A pair of reproductive termites founds the colony.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;founds&quot; in line 9 is closest in meaning</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. establishes  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. become</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. form</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. govern</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US"
+        ><br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >55.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonim)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="171"
+          id="Picture 20"
+          src="{{url_for('static', filename='question/image047.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >Like those of ants, termite colonies consist of different classes, each
+        with its own particular job.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >In line 5, the word &quot;classes&quot; is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. categories  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. type</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. kind</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. way</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US"
+        ><br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >56.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonim)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="111"
+          id="Picture 17"
+          src="{{url_for('static', filename='question/image048.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >He had contracted polio in 1921 and eventually died of illness in
+        1945.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >In line 22, the word &quot;contracted&quot; is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. developed  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. thought</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. eradicate</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. suffer from</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US"
+        ><br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >57.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.(synonym)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="112"
+          id="Picture 16"
+          src="{{url_for('static', filename='question/image049.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >When civil war broke out in 1869, he was forced to flee his country,
+        and he moved out this business to South Florida.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;flee&quot; in line 4 means most nearly the same as</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. escape  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. represent</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. leave</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. visit</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >58.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">.(unrelated)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="225"
+          id="Picture 592144807"
+          src="{{url_for('static', filename='question/image031.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >Cooling an entire carcass requires a considerable amount of
+        refrigerated space, since bone and trimmable fat are cooled along with
+        the muscle.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;trimmable&quot; in line 7 is nearest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. removable  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. human</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. vegetable</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. dry</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >59.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US">(synonym)</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="225"
+          id="Picture 1059023751"
+          src="{{url_for('static', filename='question/image031.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >Cooling an entire carcass requires a considerable amount of
+        refrigerated space, since bone and trimmable fat are cooled along with
+        the muscle.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;considerable&quot; in line 6 is nearest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. substantial  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. large</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. small</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. certain</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">ANS: A</span
+      ><span lang="EN-US"
+        ><br clear="all" style="page-break-before: always" />
+      </span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >60.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US"
+        >Singular Noun 2 <i>(failed to generate distractor)</i></span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="222"
+          src="{{url_for('static', filename='question/image050.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Whereas literatur in the first half of the eighteenth century in
+        America has been largely religious and moral in tone, by the latter half
+        of the century the revolutionary fervor that was coming to life in the
+        colonies began be reflected in the literature of the time, which in tune
+        served to further influence the population.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;fervor&quot; in line 2 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u><span lang="EN-US" style="color: red">a. spirit</span></u></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. purport</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. look</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. smell</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >61.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US"
+        >Singular Noun 4 <i>(failed to generate distractor)</i></span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="111"
+          src="{{url_for('static', filename='question/image003.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >A total eclipse can last up to 7 minutes, during which time the Moon's
+        shadow moves across Earth at a rate of about 6 kilometers per
+        second.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;rate&quot; in line 9 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u><span lang="EN-US" style="color: red">a. speed</span></u></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. pep pill</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. focal ratio</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. f number</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US">&nbsp;</span>
+    </p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >62.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><span lang="EN-US"
+        >Singular Noun 5 <i>(failed to generate distractor)</i></span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="149"
+          id="Picture 5"
+          src="{{url_for('static', filename='question/image051.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >O'Neills plays, forty-five in all, cover a wide range of dramatic
+        subjects, but several themes emerge, including the ambivalence of family
+        relationship, the struggle between the sexes, the conflict between
+        spiritual and material desires, and the vision of modern man as a victim
+        of uncontrollable circumstances.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;struggle&quot; in line 26 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u><span lang="EN-US" style="color: red">a. conflict</span></u></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. difference in opinion</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. difference</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. engagement</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >63.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><i><span lang="EN-US">(failed to generate distractor)</span></i>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="185"
+          id="Picture 2"
+          src="{{url_for('static', filename='question/image052.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Winners were greatly honored by having olive wreaths placed on their
+        head and having poems sung about their deeds.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >In line 14, the word &quot;deeds&quot; is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u
+            ><span lang="EN-US" style="color: red">a. accomplishments</span></u
+          ></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. acquisitions</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. skills</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. acquirements</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >64.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><i><span lang="EN-US">(failed to generate distractor)</span></i>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="240"
+          id="Picture 4"
+          src="{{url_for('static', filename='question/image053.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Here, as in the Old World, there is evidence that humans hunted theses
+        elephants, as shown by the numerous spear points found with mammoth
+        remains.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >Which of the following could best substitute for the word
+        &quot;remains&quot; in line 17?</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u><span lang="EN-US" style="color: red">a. bones</span></u></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. oses</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. offs</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. pearls</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <span lang="EN-US"
+        >65.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+      ><i><span lang="EN-US">(failed to generate distractor)</span></i>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="204"
+          id="Picture 11"
+          src="{{url_for('static', filename='question/image054.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >In 1930 he consolidated all the branches of the Bank of Italy, the Bank
+        of America in New York City, and other Bank of Maerica that he had
+        formed in California into the Bank of Maerica National trust and Saving
+        Association.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;consolidated&quot; in line 17 is closest in meaning
+        to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u><span lang="EN-US" style="color: red">a. merged</span></u></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. fluxed</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c. immixed</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. conflated</span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <i
+        ><span lang="EN-US"
+          >66.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+        ></i
+      ><i><span lang="EN-US">(failed to generate distractor)</span></i>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="151"
+          id="Picture 32"
+          src="{{url_for('static', filename='question/image055.jpg')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >An aesthetic justification contends that biodiversity contributes to
+        the quality of life because many of the endangered plants and animals
+        are particularly appreciated for theirs unique physical beauty.</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;unique&quot; in line 5 is closest in meaning to</span
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <b
+        ><i
+          ><u><span lang="EN-US" style="color: red">a. special</span></u></i
+        ></b
+      >
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">b. limited</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">c.&nbsp;peculiar</span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left: 18pt">
+      <span lang="EN-US" style="color: red">d. exceptional</span>
+    </p>
+
+    <span
+      lang="EN-US"
+      style="font-size: 12pt; font-family: 'Calibri', sans-serif"
+      ><br clear="all" style="page-break-before: always" />
+    </span>
+
+    <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+
+    <p class="MsoListParagraph" style="margin-left: 18pt; text-indent: -18pt">
+      <i
+        ><span lang="EN-US"
+          >67.<span style="font: 7pt 'Times New Roman'">&nbsp; </span></span
+        ></i
+      ><i><span lang="EN-US">(failed to generate distractor)</span></i>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US"
+        ><img
+          border="0"
+          width="468"
+          height="129"
+          id="Picture 10"
+          src="{{url_for('static', filename='question/image056.png')}}"
+      /></span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >Problem became so serious in the state of Michigan that Governor
+        William A. Comstock was forced to declare a moratorium on all banking
+        activities in the state on February 14, 1993.</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">&nbsp;</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red"
+        >The word &quot;moratorium&quot; in line 4 is closest in meaning to
+        which of the following?</span
+      >
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">a. temporary cessation  </span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">b. someone</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">c. government</span>
+    </p>
+
+    <p class="MsoNormal">
+      <span lang="EN-US" style="color: red">d. president</span>
+    </p>
+
+    <p class="MsoNormal"><span lang="EN-US">ANS: A</span></p>
+  </div>
+</div>
+{% endblock %}

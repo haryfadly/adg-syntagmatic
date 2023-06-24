@@ -1,0 +1,91 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<div class="container mt-3">
+  <h1>Welcome!</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for msg in messages %}
+        <p><i>{{msg}}</i></P>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</div>
+<div class="container mt-5">
+  <h3>Example question</h3>
+  <!-- <p class="text-justify">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ultrices
+    rutrum nibh, eget rhoncus urna mattis ac. Phasellus non purus vel metus
+    imperdiet sollicitudin a quis sem. Mauris sollicitudin, tellus id interdum
+    sagittis, sem enim ultricies neque, eu suscipit augue tellus nec neque.
+    Phasellus nunc tortor, tempus quis dolor non, ornare venenatis libero. Duis
+    interdum lorem nec velit lacinia bibendum. Nullam diam felis, efficitur non
+    laoreet non, efficitur non odio. Sed id ullamcorper dolor. Sed eget
+    hendrerit elit, ut placerat risus. Fusce nec congue quam. Vestibulum
+    dignissim purus quis dui maximus varius. Fusce ut magna a libero tincidunt
+    volutpat. Ut aliquam pretium turpis tempor viverra.
+  </p> -->
+  <p class="text-justify">
+    The shark has senses specially (1)_____ the animal's life underwater. Smell is a shark's most acute sense. Approximately 70 percent of the shark's brain is used for smelling functions. Experiments have shown that sharks can detect prey (2)_____ by smell, and the hungrier the shark, the less stimulant needed to elicit a reaction.
+    Sharks are sensitive to light and can detect certain objects even in murky water. Some have a mirror-like layer under the retina that reflects incoming light and increases the (3)_____ light available to the eye. Sharks can also sense electric and magnetic fields. Sensory pores located on the shark's head can detect a prey's bioelectric field (4)_____ if the prey is buried in sand. A shark can also detect the Earth's magnetic field. Open-ocean sharks may use this information to (5)_____ and orient themselves.    
+  </p>
+  <p class="text-justify">
+1. 
+<ul>A. appointed by </ul>
+<ul>B. invented for</ul>
+<ul>C. figured out</ul>
+<ul>D. designed for</ul>
+2. 
+<ul>A. timidly </ul>
+<ul>B. hardly</ul>
+<ul>C. solely</ul>
+<ul>D. Disorderly</ul>
+3. 
+<ul>A. prominence of </ul>
+<ul>B. disposal of</ul>
+<ul>C. odor of</ul>
+<ul>D. amount of</ul>
+4. 
+<ul>A. even</ul>
+<ul>B. as</ul>
+<ul>C. however</ul>
+<ul>D. even though</ul>
+5. 
+<ul>A. sink</ul>
+<ul>B. navigate </ul>
+<ul>C. crawl</ul>
+<ul>D. Thrust</ul>
+  </p>
+  <div class="mt-3">
+    <p>
+      <button
+        class="btn btn-outline-warning"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapseWidthExample"
+        aria-expanded="false"
+        aria-controls="collapseWidthExample"
+      >
+        Key Answer
+      </button>
+    </p>
+    <div style="min-height: 80px">
+      <div class="collapse width" id="collapseWidthExample">
+        <div class="card card-body">
+          <p class="text-justify">
+            The shark has senses specially <b>designed</b> for the animal's life underwater. Smell is a shark's most acute sense. Approximately 70 percent of the shark's brain is used for smelling functions. Experiments have shown that sharks can detect prey <b>solely</b> by smell, and the hungrier the shark, the less stimulant needed to elicit a reaction.
+            Sharks are sensitive to light and can detect certain objects even in murky water. Some have a mirror-like layer under the retina that reflects incoming light and increases the <b>amount of</b> light available to the eye. Sharks can also sense electric and magnetic fields. Sensory pores located on the shark's head can detect a prey's bioelectric field <b>even</b> if the prey is buried in sand. A shark can also detect the Earth's magnetic field. Open-ocean sharks may use this information to <b>navigate</b> and orient themselves.    
+          </p>
+          <p class="text-justify">
+            <ul>1.D</ul>
+            <ul>2.C</ul>
+            <ul>3.D</ul>
+            <ul>4.A</ul>
+            <ul>5.B</ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+{% endblock %}
